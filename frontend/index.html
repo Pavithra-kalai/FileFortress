@@ -6,29 +6,61 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Secure File Sharing System</h1>
+<div class="container">
+    <h1>🔐 Secure File Sharing System</h1>
 
-        <!-- Register -->
+    <!-- AUTH SECTION -->
+    <div id="authSection">
         <h2>Register</h2>
         <input type="text" id="reg_username" placeholder="Username">
         <input type="password" id="reg_password" placeholder="Password">
         <button onclick="register()">Register</button>
 
-        <!-- Login -->
         <h2>Login</h2>
         <input type="text" id="login_username" placeholder="Username">
         <input type="password" id="login_password" placeholder="Password">
         <button onclick="login()">Login</button>
+    </div>
 
-        <!-- Upload -->
-        <h2>Upload File</h2>
+    <!-- APP SECTION -->
+    <div id="appSection" style="display:none;">
+        <h2>Welcome 🎉</h2>
+        <button onclick="logout()">Logout</button>
+
+        <!-- UPLOAD -->
+        <h3>Upload File</h3>
         <input type="file" id="fileInput">
         <button onclick="uploadFile()">Upload</button>
 
-        <p id="message"></p>
+        <!-- DOWNLOAD -->
+        <h3>Download File (Using File ID)</h3>
+        <input type="text" id="fileIdInput" placeholder="Enter File ID">
+        <button onclick="downloadFile()">Download</button>
+
+        <!-- MY FILES DASHBOARD -->
+        <h2>📁 My Files</h2>
+        <button onclick="loadFiles()">🔄 Refresh Files</button>
+
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Expiry Time</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody id="fileTable"></tbody>
+        </table>
+
+        <!-- DOWNLOAD LINK DISPLAY -->
+        <p id="linkDisplay"></p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- MESSAGE -->
+    <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
