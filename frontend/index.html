@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure File Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Secure File Sharing System</h1>
+
+        <!-- Register -->
+        <h2>Register</h2>
+        <input type="text" id="reg_username" placeholder="Username">
+        <input type="password" id="reg_password" placeholder="Password">
+        <button onclick="register()">Register</button>
+
+        <!-- Login -->
+        <h2>Login</h2>
+        <input type="text" id="login_username" placeholder="Username">
+        <input type="password" id="login_password" placeholder="Password">
+        <button onclick="login()">Login</button>
+
+        <!-- Upload -->
+        <h2>Upload File</h2>
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
